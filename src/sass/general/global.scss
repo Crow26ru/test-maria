@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

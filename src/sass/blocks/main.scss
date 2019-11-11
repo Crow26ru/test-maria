@@ -1,0 +1,89 @@
+.main {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: $desktop-width-max;
+
+  background: transparent url("../img/background.svg") no-repeat right 360px;
+  background-size: 46.17vw auto;
+
+  @include mobile-large {
+    background-size: 307px 355px;
+    background-position: right 126px;
+  }
+
+  @include desktop {
+    background-position: right 40px;
+  }
+}
+
+.main__heading {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 20.63%;
+  min-height: 100vh;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  color: $color-white;
+
+  background-color: $color-blue;
+}
+
+.main__heading h1 {
+  margin-top: 296px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 6px;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  writing-mode: vertical-lr;
+  color: $color-white;
+
+  transform: rotate(180deg);
+}
+
+.main__content {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-top: 39px;
+  padding-left: 21px;
+  padding-right: 23px;
+  width: 79.37%;
+  min-height: 100vh;
+}
+
+.main__intro {
+  margin-bottom: 20px;
+}
+
+.main__intro p,
+.main__intro em {
+  color: $color-black;
+}
+
+.main__intro p {
+  margin: 0;
+
+  font-weight: 300;
+}
+
+.main__intro em {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.46px;
+}

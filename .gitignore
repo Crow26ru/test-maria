@@ -1,0 +1,12 @@
+.directory
+.DS_Store
+.idea
+.vscode
+*.ai
+*.exe
+*.log
+*.psd
+*.sublime*
+node_modules/
+npm-debug.*
+Thumbs.db

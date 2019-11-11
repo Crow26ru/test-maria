@@ -1,0 +1,23 @@
+/* --- Точки перехода --- */
+$mobile-width-min: 320px;
+$mobile-width-max: 767px;
+$tablet-width-min: 768px;
+$tablet-width-max: 1023px;
+$desktop-width-min: 1024px;
+$desktop-width-max: 1440px;
+$maket-width: 665px;
+
+/* --- Ретина --- */
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+/* --- Цвета --- */
+$color-white: #ffffff;
+$color-white-07: transparentize($color-white, 0.3);
+$color-subwhite: #f2f2f2;
+$color-gray: #7c7c7c;
+$color-black: #111111;
+$color-blue: #5a61ed;
+$color-blue-07: transparentize($color-blue, 0.3);
+$color-red: #ff3333;
+$color-green: #456c35;

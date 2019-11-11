@@ -1,0 +1,263 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.form__input-container {
+  width: 100%;
+
+  @include mobile-large {
+    margin-bottom: 16px;
+    width: 48.5%;
+  }
+
+  @include desktop {
+    margin-right: 5%;
+    width: 30%;
+
+    &:nth-of-type(3n),
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.form__input-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.form__input-container label,
+.form__input-container p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-gray;
+}
+
+.form__input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form__input-container p {
+  margin: 0 0 5px;
+}
+
+.form__input-container input,
+.form__input-container select {
+  appearance: none;
+  display: block;
+  border: none;
+  border-bottom: 1px solid $color-subwhite;
+  padding: 0 0 6px;
+}
+
+.form__input-container input[type="text"],
+.form__input-container input[type="email"],
+.form__input-container input[type="password"] {
+  padding-right: 15px;
+  width: 100%;
+
+  background-color: transparent;
+}
+
+.form__input-container input[type="email"]:not(:invalid) {
+  background: transparent url("../img/check-mark.svg") no-repeat right 4px;
+  background-size: 11px 8px;
+}
+
+.form__input-container input::placeholder {
+  color: $color-black;
+
+  opacity: 1;
+}
+
+.form__input-container select {
+  padding-right: 8px;
+  width: 100%;
+
+  background: transparent url("../img/select-open.svg") no-repeat right 7px;
+  background-size: 8px 5px;
+  cursor: pointer;
+}
+
+.form__input-container select::-ms-expand {
+  display: none;
+}
+
+.form__input-container--date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form__input-container--date p {
+  width: 100%;
+}
+
+.form__input-container--date select {
+  margin-right: 4.18%;
+  width: auto;
+}
+
+.form__input-container--date select:first-of-type {
+  width: 23.88%;
+}
+
+.form__input-container--date select:nth-of-type(2) {
+  width: 38.9%;
+}
+
+.form__input-container--date select:last-of-type {
+  width: 28.86%;
+  margin-right: 0;
+}
+
+.form__input-container--gender {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form__input-container--gender p {
+  width: 100%;
+}
+
+.form__input-container--gender div {
+  line-height: 0;
+}
+
+.form__input-container--gender div:not(:last-of-type) {
+  margin-right: 21px;
+}
+
+.form__input-container--gender label {
+  position: relative;
+
+  padding-left: 18px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-black;
+
+  transition: 0.4s color;
+  cursor: pointer;
+}
+
+.form__input-container--gender label::before,
+.form__input-container--gender label::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+  transition: 0.4s background-color;
+}
+
+.form__input-container--gender label::before {
+  top: 2px;
+  left: -1px;
+
+  border: 1px solid $color-blue;
+  width: 12px;
+  height: 12px;
+}
+
+.form__input-container--gender input:checked + label::after {
+  top: 5px;
+  left: 2px;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: $color-blue;
+}
+
+.form__input-container--gender input:disabled + label::before {
+  border-color: $color-gray;
+}
+
+.form__input-container--gender input:checked:disabled + label::before {
+  border-color: $color-gray;
+}
+
+.form__input-container--gender input:checked:disabled + label::after {
+  background-color: $color-gray;
+}
+
+.form__input-container--gender input:checked:focus + label::before {
+  border-color: $color-red;
+}
+
+.form__input-container--gender label:hover {
+  color: $color-blue;
+
+  transition: 0.4s color;
+}
+
+.form__bottom {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 83px;
+  width: 100%;
+
+  @include mobile-small-only {
+    flex-wrap: wrap;
+  }
+}
+
+.form__bottom p {
+  margin: -5px 0 0;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: $color-black;
+
+  @include mobile-small-only {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+}
+
+.form__bottom p > a,
+.form__bottom p > a:hover,
+.form__bottom p > a:focus,
+.form__bottom p > a:active {
+  transition: color 0.4s;
+}
+
+.form__bottom p > a {
+  color: $color-blue;
+}
+
+.form__bottom p > a:hover,
+.form__bottom p > a:focus {
+  color: $color-blue-07;
+}
+
+.form__bottom p > a:active {
+  color: $color-black;
+}
+
+.form__submit {
+  padding: 7px 0;
+  width: 154px;
+
+  @include mobile-small-only {
+    width: 100%;
+    max-width: 154px;
+  }
+}
